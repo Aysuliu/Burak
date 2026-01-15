@@ -1,6 +1,7 @@
 import express from 'express';
 import path from "path"; //core package
 import router from "./router";
+import routerAdmin from "./routerAdmin"
 
 /** 1-Entrance **/
 const app = express();
@@ -15,7 +16,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', "ejs");
 
 /** 4-Routers **/
-app.use('/', router); //middleware design pattern
+app.use('/admin', routerAdmin); // BSSR: EJS
+app.use('/', router);           //SPA: REACT
+
 
 
 
