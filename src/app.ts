@@ -1,5 +1,6 @@
 import express from 'express';
 import path from "path"; //core package
+import router from "./router";
 
 /** 1-Entrance **/
 const app = express();
@@ -14,4 +15,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', "ejs");
 
 /** 4-Routers **/
+app.use('/', router); //middleware design pattern
+
+
+
+
 export default app; //commonjs => module.exports()
