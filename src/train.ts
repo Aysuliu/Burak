@@ -17,17 +17,33 @@
 
 
 
-//MIT task 
+//MIT task #H
 
-function getPositive(a: number[]): string {
-    const arrayA: number[] = [];
-    for (let i = 0; i < a.length; i++) {
-        if (a[i] > 0) {
-            arrayA.push(a[i]);
+// function getPositive(a: number[]): string {
+//     const arrayA: number[] = [];
+//     for (let i = 0; i < a.length; i++) {
+//         if (a[i] > 0) {
+//             arrayA.push(a[i]);
+//         }
+//     }
+//     return arrayA.join('');
+// }
+
+// console.log(getPositive([1, -4, 2]));
+// console.log(getPositive([1, -3, 3, -2, 2]));
+
+
+//MIT task #H-2
+function getDigits(a: string): string {
+    const digits: string[] = [];
+
+    for (let i=0; i < a.length; i++) {
+        if ( a[i] >= '0' && a[i] <= '9') {
+            digits.push(a[i]);
         }
     }
-    return arrayA.join('');
+    return digits.join('');
 }
 
-console.log(getPositive([1, -4, 2]));
-console.log(getPositive([1, -3, 3, -2, 2]));
+console.log(getDigits("m14i1t"));
+console.log(getDigits("ma35gd21t0"));
