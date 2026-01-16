@@ -34,16 +34,27 @@
 
 
 //MIT task #H-2
-function getDigits(a: string): string {
-    const digits: string[] = [];
+// function getDigits(a: string): string {
+//     const digits: string[] = [];
 
-    for (let i=0; i < a.length; i++) {
-        if ( a[i] >= '0' && a[i] <= '9') {
-            digits.push(a[i]);
-        }
-    }
-    return digits.join('');
-}
+//     for (let i=0; i < a.length; i++) {
+//         if ( a[i] >= '0' && a[i] <= '9') {
+//             digits.push(a[i]);
+//         }
+//     }
+//     return digits.join('');
+// }
 
-console.log(getDigits("m14i1t"));
-console.log(getDigits("ma35gd21t0"));
+// console.log(getDigits("m14i1t"));
+// console.log(getDigits("ma35gd21t0"));
+
+
+/* Project Standards:
+    - Logging Standards
+    - Naming Standards: 
+            function, method, variable => Camel case standard => goHome
+            class => Pascal case standard => MemberService
+            folder => Kebab case
+            css => Snake case => button_size
+    - Error Standards
+*/
