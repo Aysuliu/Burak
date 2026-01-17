@@ -58,3 +58,7 @@
             css => Snake case => button_size
     - Error Standards
 */
+
+
+/** API types: Traditional & RestApi, GraphQL
+ */

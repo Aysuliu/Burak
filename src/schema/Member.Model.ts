@@ -56,3 +56,6 @@ memberPoints: {
 ); 
 
 export default mongoose.model('Member', memberSchema);
+
+
+//required 5 info: nick, password, number, created/updatedAt, index
