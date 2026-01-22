@@ -49,6 +49,31 @@
 // console.log(getDigits("ma35gd21t0"));
 
 
+//MIT task #I
+function majorityElement(a: number[]): number {
+    let maxCnt:number = 0;
+    let maxNumber: number = a[0];
+    
+    for ( let i = 0; i < a.length; i++) {
+        let cnt: number = 0;
+        for (let k = 0; k < a.length; k++) {
+            if ( a[i] == a[k]) {
+                cnt++;
+            }
+        }
+
+        if ( cnt > maxCnt) {
+            maxCnt = cnt;
+            maxNumber = a[i];
+        }
+    }
+       return maxNumber;
+};
+
+console.log(majorityElement([1,2,3,3,5,6,3,7,3]));
+console.log(majorityElement([1,2,3,4,5,6,4,7,4]));
+
+
 /* Project Standards:
     - Logging Standards
     - Naming Standards: 
