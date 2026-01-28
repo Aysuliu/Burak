@@ -73,19 +73,22 @@
 // console.log(majorityElement([1,2,3,3,5,6,3,7,3]));
 // console.log(majorityElement([1,2,3,4,5,6,4,7,4]));
 
-//TASK J:
-function findLongestWord(a: string): string { //define
-    const sentence = a.split(' ');
-    var lengths: string = "";
-    for ( let i = 0; i < sentence.length; i++) {
-        if(sentence[i].length > lengths.length) {
-            lengths = sentence[i];
-        }
-    }
-    return lengths; //longest word 
-}
-console.log(findLongestWord("I came from Uzbekistan!")); 
-console.log(findLongestWord("I came from KoreaOfRepublic!"));//call 
+// //TASK J:
+// function findLongestWord(a: string): string { //define
+//     const sentence = a.split(' ');
+//     var lengths: string = "";
+//     for ( let i = 0; i < sentence.length; i++) {
+//         if(sentence[i].length > lengths.length) {
+//             lengths = sentence[i];
+//         }
+//     }
+//     return lengths; //longest word 
+// }
+// console.log(findLongestWord("I came from Uzbekistan!")); 
+// console.log(findLongestWord("I came from KoreaOfRepublic!"));//call 
+
+//TASK K
+
 
 /* Project Standards:
     - Logging Standards
@@ -106,4 +109,10 @@ console.log(findLongestWord("I came from KoreaOfRepublic!"));//call
 /** Frontend development:
  * traditional development -> BSSR (Admin page)  -> EJS
  * modern development -> SPA (User app) -> React library
+ */
+
+
+/** Sessions
+ * request join
+ * self destroy
  */
