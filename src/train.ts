@@ -88,6 +88,22 @@
 // console.log(findLongestWord("I came from KoreaOfRepublic!"));//call 
 
 //TASK K
+function countVowels(a: string): number {
+    const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+    let cnt: number = 0;
+    
+    for (let i = 0; i < a.length; i++) {
+        if (vowels.includes(a[i])) {
+            cnt++;
+        }
+    }
+    
+    return cnt;
+}
+
+console.log(countVowels("string"));
+console.log(countVowels("vowel"));
+console.log(countVowels("terminal"));
 
 
 /* Project Standards:
