@@ -87,23 +87,26 @@
 // console.log(findLongestWord("I came from Uzbekistan!")); 
 // console.log(findLongestWord("I came from KoreaOfRepublic!"));//call 
 
-//TASK K
-function countVowels(a: string): number {
-    const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
-    let cnt: number = 0;
+// //TASK K
+// function countVowels(a: string): number {
+//     const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+//     let cnt: number = 0;
     
-    for (let i = 0; i < a.length; i++) {
-        if (vowels.includes(a[i])) {
-            cnt++;
-        }
-    }
+//     for (let i = 0; i < a.length; i++) {
+//         if (vowels.includes(a[i])) {
+//             cnt++;
+//         }
+//     }
     
-    return cnt;
-}
+//     return cnt;
+// }
 
-console.log(countVowels("string"));
-console.log(countVowels("vowel"));
-console.log(countVowels("terminal"));
+// console.log(countVowels("string"));
+// console.log(countVowels("vowel"));
+// console.log(countVowels("terminal"));
+
+// TASK L
+
 
 
 /* Project Standards:
@@ -128,7 +131,15 @@ console.log(countVowels("terminal"));
  */
 
 
-/** Sessions
+/** Cookies:
  * request join
  * self destroy
+ */
+
+
+/**Validations:
+ * Frontend
+ * Backend
+ * Database
+ * DTO
  */

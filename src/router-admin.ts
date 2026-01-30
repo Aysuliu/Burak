@@ -28,7 +28,7 @@ routerAdmin.post(
     "/product/create", 
     restaurantController.verifyRestaurant,
     // uploadProductImage.single('productImage'),
-    makeUploader("products").single("productImage"),
+    makeUploader("products").array("productImages", 5),
     productController.createNewProduct);
 routerAdmin.post(
     "/product/:id", 
