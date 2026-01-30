@@ -2,6 +2,7 @@ import express from 'express';
 const routerAdmin = express.Router();
 import restaurantController from "./controllers/restaurant.controller";
 import productController from './controllers/product.controller';
+import makeUploader from './libs/utils/uploader';
 
 // Restaurants router endpoints
 routerAdmin.get("/", restaurantController.goHome);
@@ -11,6 +12,7 @@ routerAdmin
 // browser faqat GET methodni qabul qiladi
 routerAdmin
     .get("/signup", restaurantController.getSignup)
+    .post("/signup", makeUploader("members").single("memberImage"))
     .post("/signup", restaurantController.processSignup);
 
 routerAdmin.get("/logout", restaurantController.logout);
@@ -25,6 +27,8 @@ routerAdmin.get(
 routerAdmin.post(
     "/product/create", 
     restaurantController.verifyRestaurant,
+    // uploadProductImage.single('productImage'),
+    makeUploader("products").single("productImage"),
     productController.createNewProduct);
 routerAdmin.post(
     "/product/:id", 
