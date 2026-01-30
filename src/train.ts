@@ -106,6 +106,25 @@
 // console.log(countVowels("terminal"));
 
 // TASK L
+function reverseSentence( a: string): string {
+    const words = a.split(' ');
+    const reversedWords = words.map(word => {
+        return word.split('').reverse().join('');
+    });
+    return reversedWords.join(' ');
+}
+
+console.log(reverseSentence("we like coding!")); 
+console.log(reverseSentence("hello world"));      
+console.log(reverseSentence("TypeScript")); 
+
+
+
+
+
+
+
+
 
 
 
@@ -118,6 +137,7 @@
             css => Snake case => button_size
     - Error Standards
 */
+
 
 
 /** API types: Traditional & RestApi, GraphQL
