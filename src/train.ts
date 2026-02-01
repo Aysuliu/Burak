@@ -105,23 +105,31 @@
 // console.log(countVowels("vowel"));
 // console.log(countVowels("terminal"));
 
-// TASK L
-function reverseSentence( a: string): string {
-    const words = a.split(' ');
-    const reversedWords = words.map(word => {
-        return word.split('').reverse().join('');
-    });
-    return reversedWords.join(' ');
+// // TASK L
+// function reverseSentence( a: string): string {
+//     const words = a.split(' ');
+//     const reversedWords = words.map(word => {
+//         return word.split('').reverse().join('');
+//     });
+//     return reversedWords.join(' ');
+// }
+
+// console.log(reverseSentence("we like coding!")); 
+// console.log(reverseSentence("hello world"));      
+// console.log(reverseSentence("TypeScript")); 
+
+
+
+// TASK M
+function getSquareNumbers(numbers: number[]): { number: number; square: number }[] {
+    return numbers.map(num => ({
+        number: num,
+        square: num * num
+    }));
 }
 
-console.log(reverseSentence("we like coding!")); 
-console.log(reverseSentence("hello world"));      
-console.log(reverseSentence("TypeScript")); 
-
-
-
-
-
+console.log(getSquareNumbers([1, 2, 3]));
+console.log(getSquareNumbers([4, 5, 6]));
 
 
 
