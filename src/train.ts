@@ -133,20 +133,22 @@
 
 
 
-// TASK N
-function palindromCheck(a: string): boolean {
+// // TASK N
+// function palindromCheck(a: string): boolean {
 
-    const reversedWords = a.split('').reverse().join('');
+//     const reversedWords = a.split('').reverse().join('');
 
-    if ( a === reversedWords) {
-        return true;
-    } else {return false};
-}
+//     if ( a === reversedWords) {
+//         return true;
+//     } else {return false};
+// }
 
-console.log(palindromCheck("dad"));
-console.log(palindromCheck("121213"));
-console.log(palindromCheck("mom"));
+// console.log(palindromCheck("dad"));
+// console.log(palindromCheck("121213"));
+// console.log(palindromCheck("mom"));
 
+//TASK O
+/** */
 
 
 
