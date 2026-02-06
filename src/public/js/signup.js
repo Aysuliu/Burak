@@ -7,11 +7,11 @@ $(function() {
 
     fileTarget.on("change", function() {
         if (window.FileReader) {
-            const uploadFile = $(this)[0].file[0];
-            console.log(uploadFile);
-            const fileType = uploadFile("type");
+            const uploadFile = $(this)[0].files[0];
+            console.log("uploadFile:", uploadFile);
+            const fileType = uploadFile["type"];
             const validImageType = ["image/jpg", "image/jpeg", "image/png"];
-            if (validImageType.includes(fileType)) {
+            if (!validImageType.includes(fileType)) {
                 alert("Please insert only jpeg, jpg and png")
             } else {
                 if (uploadFile) {
@@ -26,10 +26,10 @@ $(function() {
 });
 
 function validateSignupForm() {
-    const memberNick = $(".member - nick").val();
-    const memberPhone = $(".member - phone").val();
-    const memberPassword = $(".member - password").val();
-    const confirmPassword = $(".confirm - password").val();
+    const memberNick = $(".member-nick").val();
+    const memberPhone = $(".member-phone").val();
+    const memberPassword = $(".member-password").val();
+    const confirmPassword = $(".confirm-password").val();
 
     if (
         memberNick === "" ||
