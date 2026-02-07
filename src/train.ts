@@ -147,22 +147,28 @@
 // console.log(palindromCheck("121213"));
 // console.log(palindromCheck("mom"));
 
-//TASK O
-function calculateSumOfNumbers(arr: any[]): number {
-    let sum = 0;
+// //TASK O
+// function calculateSumOfNumbers(arr: any[]): number {
+//     let sum = 0;
     
-    for (let i = 0; i < arr.length; i++) {
-        if (typeof arr[i] === 'number') {
-            sum += arr[i];
-        }
-    }
+//     for (let i = 0; i < arr.length; i++) {
+//         if (typeof arr[i] === 'number') {
+//             sum += arr[i];
+//         }
+//     }
     
-    return sum;
-}
-console.log(calculateSumOfNumbers([10, "10", {son: 10}, true, 35]));
-console.log(calculateSumOfNumbers([102, "34", {son: 95}, false, 23]));
+//     return sum;
+// }
+// console.log(calculateSumOfNumbers([10, "10", {son: 10}, true, 35]));
+// console.log(calculateSumOfNumbers([102, "34", {son: 95}, false, 23]));
 
+//TASK P
+/**TASK P:
 
+Parametr sifatida yagona object qabul qiladigan function yozing.
+Qabul qilingan objectni nested array sifatida convert qilib qaytarsin
+
+MASALAN: objectToArray( {a: 10, b: 20}) return [['a', 10], ['b', 20]] */
 
 
 
