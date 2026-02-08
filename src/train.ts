@@ -162,13 +162,18 @@
 // console.log(calculateSumOfNumbers([10, "10", {son: 10}, true, 35]));
 // console.log(calculateSumOfNumbers([102, "34", {son: 95}, false, 23]));
 
+
+
+
 //TASK P
-/**TASK P:
+function objectToArray(obj: object): [string, any][] {
+  return Object.entries(obj);
+}
+console.log(objectToArray({a: 10, b: 20})); 
+console.log(objectToArray({name: 'Ace', age: 23, city: 'Busan'}));
 
-Parametr sifatida yagona object qabul qiladigan function yozing.
-Qabul qilingan objectni nested array sifatida convert qilib qaytarsin
 
-MASALAN: objectToArray( {a: 10, b: 20}) return [['a', 10], ['b', 20]] */
+
 
 
 
