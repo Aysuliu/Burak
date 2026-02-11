@@ -165,16 +165,31 @@
 
 
 
-//TASK P
-function objectToArray(obj: object): [string, any][] {
-  return Object.entries(obj);
+// //TASK P
+// function objectToArray(obj: object): [string, any][] {
+//   return Object.entries(obj);
+// }
+// console.log(objectToArray({a: 10, b: 20})); 
+// console.log(objectToArray({name: 'Ace', age: 23, city: 'Busan'}));
+
+
+
+//TASK Q
+
+function hasProperty(obj: object, propertyName: string): boolean {
+  return propertyName in obj;
 }
-console.log(objectToArray({a: 10, b: 20})); 
-console.log(objectToArray({name: 'Ace', age: 23, city: 'Busan'}));
 
+interface Car {
+  name: string;
+  model: string;
+}
 
+const car: Car = { name: "BMW", model: "M3" };
 
-
+console.log(hasProperty(car, "model"));  
+console.log(hasProperty(car, "year")); 
+console.log(hasProperty({ name: "BMW", model: "M3" }, "production")); 
 
 
 
