@@ -174,22 +174,36 @@
 
 
 
-//TASK Q
+// //TASK Q
 
-function hasProperty(obj: object, propertyName: string): boolean {
-  return propertyName in obj;
+// function hasProperty(obj: object, propertyName: string): boolean {
+//   return propertyName in obj;
+// }
+
+// interface Car {
+//   name: string;
+//   model: string;
+// }
+
+// const car: Car = {name: "BMW", model: "M3" };
+
+// console.log(hasProperty(car, "model"));  
+// console.log(hasProperty(car, "year")); 
+// console.log(hasProperty({ name: "BMW", model: "M3" }, "production")); 
+
+
+// Task R
+function calculate(expression: string): number {
+  const numbers = expression.match(/-?\d+(\.\d+)?/g);
+
+  if (!numbers) return 0;
+
+  return numbers.reduce((sum, num) => sum + parseFloat(num), 0);
 }
 
-interface Car {
-  name: string;
-  model: string;
-}
-
-const car: Car = { name: "BMW", model: "M3" };
-
-console.log(hasProperty(car, "model"));  
-console.log(hasProperty(car, "year")); 
-console.log(hasProperty({ name: "BMW", model: "M3" }, "production")); 
+console.log(calculate("1 + 3"));   
+console.log(calculate("5 + 10"));  
+console.log(calculate("2 + 3 + 4")); 
 
 
 
