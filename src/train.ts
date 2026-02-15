@@ -192,18 +192,34 @@
 // console.log(hasProperty({ name: "BMW", model: "M3" }, "production")); 
 
 
-// Task R
-function calculate(expression: string): number {
-  const numbers = expression.match(/-?\d+(\.\d+)?/g);
+// // Task R
+// function calculate(expression: string): number {
+//   const numbers = expression.match(/-?\d+(\.\d+)?/g);
 
-  if (!numbers) return 0;
+//   if (!numbers) return 0;
 
-  return numbers.reduce((sum, num) => sum + parseFloat(num), 0);
+//   return numbers.reduce((sum, num) => sum + parseFloat(num), 0);
+// }
+
+// console.log(calculate("1 + 3"));   
+// console.log(calculate("5 + 10"));  
+// console.log(calculate("2 + 3 + 4")); 
+
+
+//Task S
+function missingNumber(nums: number[]): number {
+  const n = nums.length;
+  const expectedSum = (n * (n + 1)) / 2;
+  const actualSum = nums.reduce((acc, num) => acc + num, 0);
+  return expectedSum - actualSum;
 }
 
-console.log(calculate("1 + 3"));   
-console.log(calculate("5 + 10"));  
-console.log(calculate("2 + 3 + 4")); 
+console.log(missingNumber([3, 0, 1])); 
+console.log(missingNumber([0, 1]));    
+console.log(missingNumber([9,6,4,2,3,5,7,0,1])); 
+
+
+
 
 
 
