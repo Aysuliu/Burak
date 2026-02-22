@@ -244,22 +244,33 @@
 
 
 
-// TASK U 
-function oddNums(num: number): number {
-  let cnt = 0;
+// // TASK U 
+// function oddNums(num: number): number {
+//   let cnt = 0;
 
-  for (let i = 0; i < num; i++) {
-    if (i % 2 !== 0) {
-      cnt++;
-    }
+//   for (let i = 0; i < num; i++) {
+//     if (i % 2 !== 0) {
+//       cnt++;
+//     }
+//   }
+//   return cnt;
+// }
+
+// console.log(oddNums(9));  
+// console.log(oddNums(87)); 
+
+//TASK V
+type charCnt = {
+  [key: string]: number;
+};
+function countChars(str: string): charCnt {
+  const result: charCnt = {};
+  for (const char of str){
+    result[char] = (result[char] || 0) + 1;
   }
-  return cnt;
+  return result;
 }
-
-console.log(oddNums(9));  
-console.log(oddNums(87)); 
-
-
+console.log(countChars("hello"));
 
 
 
