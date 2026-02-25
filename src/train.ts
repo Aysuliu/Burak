@@ -259,18 +259,42 @@
 // console.log(oddNums(9));  
 // console.log(oddNums(87)); 
 
-//TASK V
-type charCnt = {
-  [key: string]: number;
-};
-function countChars(str: string): charCnt {
-  const result: charCnt = {};
-  for (const char of str){
-    result[char] = (result[char] || 0) + 1;
-  }
-  return result;
-}
-console.log(countChars("hello"));
+// //TASK V
+// type charCnt = {
+//   [key: string]: number;
+// };
+// function countChars(str: string): charCnt {
+//   const result: charCnt = {};
+//   for (const char of str){
+//     result[char] = (result[char] || 0) + 1;
+//   }
+//   return result;
+// }
+// console.log(countChars("hello"));
+
+
+
+
+
+
+//TASK W
+// //** S hunday function yozing, u o'ziga parametr sifatida
+// yagona array va number qabul qilsin. Siz tuzgan function
+// arrayni numberda berilgan uzunlikda kesib bo'laklarga
+// ajratgan holatida qaytarsin.
+// MASALAN: chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3);
+// return [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10]];
+
+// Yuqoridagi namunada berilayotgan array ikkinchi parametr 3'ga
+// asoslanib 3 bo'lakga bo'linib qaytmoqda. Qolgani esa o'z holati qolyapti 
+// * //
+
+
+// function chunkArray()
+
+
+
+
 
 
 
