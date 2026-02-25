@@ -278,19 +278,17 @@
 
 
 //TASK W
-// //** S hunday function yozing, u o'ziga parametr sifatida
-// yagona array va number qabul qilsin. Siz tuzgan function
-// arrayni numberda berilgan uzunlikda kesib bo'laklarga
-// ajratgan holatida qaytarsin.
-// MASALAN: chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3);
-// return [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10]];
+function chunkArray<T>(array: T[], size: number): T[][] {
+    const result: T[][] = [];
+    for (let i = 0; i < array.length; i += size) {
+        result.push(array.slice(i, i + size));
+    }
+    return result;
+}
 
-// Yuqoridagi namunada berilayotgan array ikkinchi parametr 3'ga
-// asoslanib 3 bo'lakga bo'linib qaytmoqda. Qolgani esa o'z holati qolyapti 
-// * //
-
-
-// function chunkArray()
+console.log(chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3));
+console.log(chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2));
+console.log(chunkArray(['a', 'b', 'c', 'd', 'e'], 2));
 
 
 
