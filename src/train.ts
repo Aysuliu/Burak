@@ -277,20 +277,36 @@
 
 
 
-//TASK W
-function chunkArray<T>(array: T[], size: number): T[][] {
-    const result: T[][] = [];
-    for (let i = 0; i < array.length; i += size) {
-        result.push(array.slice(i, i + size));
+// //TASK W
+// function chunkArray<T>(array: T[], size: number): T[][] {
+//     const result: T[][] = [];
+//     for (let i = 0; i < array.length; i += size) {
+//         result.push(array.slice(i, i + size));
+//     }
+//     return result;
+// }
+
+// console.log(chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3));
+// console.log(chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2));
+// console.log(chunkArray(['a', 'b', 'c', 'd', 'e'], 2));
+
+
+//TASK X recursion if nested obj
+
+function countOccurrences(obj: Record<string, any>, key: string): number {
+    let cnt = 0;
+    for(const k in obj) {
+        if(k===key) {
+            cnt++;
+        }
+        if(typeof obj[k]=== "object" && obj[k]!== null){ 
+            cnt+= countOccurrences(obj[k], key);
+        }
     }
-    return result;
-}
+    return cnt;
+};
 
-console.log(chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3));
-console.log(chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2));
-console.log(chunkArray(['a', 'b', 'c', 'd', 'e'], 2));
-
-
+console.log(countOccurrences({model: "Bugatti", steer: { model: "Hankook", size: 30}}, "model"));
 
 
 
