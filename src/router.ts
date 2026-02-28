@@ -3,6 +3,7 @@ const router = express.Router();
 import memberController from "./controllers/member.controller";
 import uploader from "./libs/utils/uploader";
 import restaurantController from './controllers/restaurant.controller';
+import productController from './controllers/product.controller';
 
 //Member
 // Restaurants router endpoints
@@ -17,6 +18,7 @@ router.get("/member/top-users", memberController.getTopUsers);
 
 
 //Product
+router.get("/product/all", productController.getProducts);
 
 
 //Order
