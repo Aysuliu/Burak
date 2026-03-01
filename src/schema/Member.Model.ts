@@ -51,7 +51,7 @@ memberPoints: {
     default: 0
 },
 },
-{timestamps: true} //updateAt, createAt
+{timestamps: true } //updateAt, createAt
 
 ); 
 
