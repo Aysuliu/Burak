@@ -291,24 +291,31 @@
 // console.log(chunkArray(['a', 'b', 'c', 'd', 'e'], 2));
 
 
-//TASK X recursion if nested obj
+// //TASK X recursion if nested obj
 
-function countOccurrences(obj: Record<string, any>, key: string): number {
-    let cnt = 0;
-    for(const k in obj) {
-        if(k===key) {
-            cnt++;
-        }
-        if(typeof obj[k]=== "object" && obj[k]!== null){ 
-            cnt+= countOccurrences(obj[k], key);
-        }
-    }
-    return cnt;
-};
+// function countOccurrences(obj: Record<string, any>, key: string): number {
+//     let cnt = 0;
+//     for(const k in obj) {
+//         if(k===key) {
+//             cnt++;
+//         }
+//         if(typeof obj[k]=== "object" && obj[k]!== null){ 
+//             cnt+= countOccurrences(obj[k], key);
+//         }
+//     }
+//     return cnt;
+// };
 
-console.log(countOccurrences({model: "Bugatti", steer: { model: "Hankook", size: 30}}, "model"));
+// console.log(countOccurrences({model: "Bugatti", steer: { model: "Hankook", size: 30}}, "model"));
 
 
+//TASK Y
+function findIntersection(arr1: number[], arr2: number[]): number[] {
+    return arr1.filter((item=>arr2.includes(item)));
+}
+
+console.log(findIntersection([1,2,3], [3,2,0]));
+console.log(findIntersection([3,5,6,7,2], [7,5,1,9,8]));
 
 
 
