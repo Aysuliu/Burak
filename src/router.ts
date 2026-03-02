@@ -4,6 +4,7 @@ import memberController from "./controllers/member.controller";
 import uploader from "./libs/utils/uploader";
 import restaurantController from './controllers/restaurant.controller';
 import productController from './controllers/product.controller';
+import orderController from './controllers/order.controller';
 
 //Member
 // Restaurants router endpoints
@@ -21,8 +22,11 @@ router.get("/member/top-users", memberController.getTopUsers);
 router.get("/product/all", productController.getProducts);
 router.get("/product/:id", memberController.retrieveAuth, productController.getProduct);
 
-
 //Order
+router.post("/order/create",
+    memberController.verifyAuth,
+    orderController.createOrder
+);
 
 
 export default router;
