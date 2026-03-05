@@ -13,12 +13,15 @@ const productController: T = {};
 productController.getProducts = async (req: Request, res: Response) => {
     try {
         console.log('getProducts');
+        // Destructuring the query params
         const {page, limit, order, productCollection, search} = req.query;
+        // Building the inquiry object cuz everything comes as str
         const inquiry: ProductInquiry = {
             order: String(order),
             page: Number(page),
             limit: Number(limit),
         };
+        // Optionally adding two variables into query
         if(productCollection) inquiry.productCollection = productCollection as ProductCollection;
         if(search) inquiry.search = String(search);
 
