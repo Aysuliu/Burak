@@ -309,14 +309,27 @@
 // console.log(countOccurrences({model: "Bugatti", steer: { model: "Hankook", size: 30}}, "model"));
 
 
-//TASK Y
-function findIntersection(arr1: number[], arr2: number[]): number[] {
-    return arr1.filter((item=>arr2.includes(item)));
-}
+// //TASK Y
+// function findIntersection(arr1: number[], arr2: number[]): number[] {
+//     return arr1.filter((item=>arr2.includes(item)));
+// }
 
-console.log(findIntersection([1,2,3], [3,2,0]));
-console.log(findIntersection([3,5,6,7,2], [7,5,1,9,8]));
+// console.log(findIntersection([1,2,3], [3,2,0]));
+// console.log(findIntersection([3,5,6,7,2], [7,5,1,9,8]));
 
+//TASK Z
+function sumEvens(arr: number[]): number {
+    let cnt = 0;
+    for(const i of arr) {
+        if (i % 2 === 0) {
+            cnt+=i;
+        }
+    }
+    return cnt;
+};
+
+console.log(sumEvens([1,2,3]));  
+console.log(sumEvens([1,2,3,2]));  
 
 
 /* Project Standards:
