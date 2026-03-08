@@ -66,9 +66,9 @@ class OrderService {
         const result = await this.orderModel.aggregate([
             {$match: matches},
             {$sort: {updatedAt: -1}},
-            {$skip: (inquiry.page -1) * inquiry.limit},
+            {$skip: (inquiry.page -1) * inquiry.limit}, 
             {$limit: inquiry.limit},
-            {
+            { //join pipeline
                 $lookup: {
                     from: "orderItems",
                     localField: "_id",
@@ -101,14 +101,13 @@ class OrderService {
         },  {orderStatus: OrderStatus},
             {new: true}).exec();
 
-    if(!result) throw new Errors(HttpCode.NOT_MODIFIED, Message.UPDATE_FAILED);
+        if(!result) throw new Errors(HttpCode.NOT_MODIFIED, Message.UPDATE_FAILED);
     
     //orderStatus Pause => Process +1
-    if(orderStatus === OrderStatus.PROCESS) {
+        if(orderStatus === OrderStatus.PROCESS) {
         await this.memberService.addUserPoint(member, 1);
     }
-    return result;
-
+        return result;
     }
 }
 export default OrderService;

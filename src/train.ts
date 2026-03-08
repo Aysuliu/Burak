@@ -317,19 +317,31 @@
 // console.log(findIntersection([1,2,3], [3,2,0]));
 // console.log(findIntersection([3,5,6,7,2], [7,5,1,9,8]));
 
-//TASK Z
-function sumEvens(arr: number[]): number {
-    let cnt = 0;
-    for(const i of arr) {
-        if (i % 2 === 0) {
-            cnt+=i;
-        }
-    }
-    return cnt;
-};
+// //TASK Z
+// function sumEvens(arr: number[]): number {
+//     let cnt = 0;
+//     for(const i of arr) {
+//         if (i % 2 === 0) {
+//             cnt+=i;
+//         }
+//     }
+//     return cnt;
+// };
 
-console.log(sumEvens([1,2,3]));  
-console.log(sumEvens([1,2,3,2]));  
+// console.log(sumEvens([1,2,3]));  
+// console.log(sumEvens([1,2,3,2]));  
+
+
+//TASK ZB
+function randomBetween(a: number, b: number): number {
+    return Math.floor(Math.random() * (b - a + 1)) + a;
+}
+
+console.log(Math.random());
+console.log(Math.floor(Math.random() * (50 - 30 + 1)));
+console.log(randomBetween(30,50));
+console.log(randomBetween(1, 10)); 
+console.log(randomBetween(100, 1000));
 
 
 /* Project Standards:

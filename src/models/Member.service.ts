@@ -89,8 +89,7 @@ class MemberService {
         {$inc: {memberPoints: point}}, 
         {new: true}
     ).exec();
-
-    }
+}
     
 
      /** SSR */
