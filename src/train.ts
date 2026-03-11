@@ -333,15 +333,23 @@
 
 
 //TASK ZB
-function randomBetween(a: number, b: number): number {
-    return Math.floor(Math.random() * (b - a + 1)) + a;
-}
+// function randomBetween(a: number, b: number): number {
+//     return Math.floor(Math.random() * (b - a + 1)) + a;
+// }
 
-console.log(Math.random());
-console.log(Math.floor(Math.random() * (50 - 30 + 1)));
-console.log(randomBetween(30,50));
-console.log(randomBetween(1, 10)); 
-console.log(randomBetween(100, 1000));
+// console.log(Math.random());
+// console.log(Math.floor(Math.random() * (50 - 30 + 1)));
+// console.log(randomBetween(30,50));
+// console.log(randomBetween(1, 10)); 
+// console.log(randomBetween(100, 1000));
+
+//TASK ZC
+function celsiusToFahrenheit(a: number): number {
+    return ((a * 1.8) + 32);
+};
+
+console.log(celsiusToFahrenheit(0)); //32
+console.log(celsiusToFahrenheit(10)); //50
 
 
 /* Project Standards:
