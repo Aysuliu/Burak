@@ -1,3 +1,4 @@
+import cors from "cors";
 import express from 'express';
 import path from "path"; //core package
 import router from "./router";
@@ -22,6 +23,10 @@ app.use(express.static(path.join(__dirname, "public"))); //middleware pattern
 app.use("/uploads", express.static("./uploads"));
 app.use(express.urlencoded({extended: true})); // traditional api
 app.use(express.json()); //restapi
+app.use(cors({
+    credentials: true, 
+    origin: true,
+}));
 app.use(cookieParser());
 app.use(morgan(MORGAN_FORMAT)); //middleware design pattern
 
