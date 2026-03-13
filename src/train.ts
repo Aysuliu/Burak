@@ -343,14 +343,25 @@
 // console.log(randomBetween(1, 10)); 
 // console.log(randomBetween(100, 1000));
 
-//TASK ZC
-function celsiusToFahrenheit(a: number): number {
-    return ((a * 1.8) + 32);
-};
+// //TASK ZC
+// function celsiusToFahrenheit(a: number): number {
+//     return ((a * 1.8) + 32);
+// };
 
-console.log(celsiusToFahrenheit(0)); //32
-console.log(celsiusToFahrenheit(10)); //50
+// console.log(celsiusToFahrenheit(0)); //32
+// console.log(celsiusToFahrenheit(10)); //50
 
+//TASK ZD
+function changeNumberInArray(num1: number, arr: number[], num2: number): number[] {
+  for (let i = 0; i < arr.length; i++) {
+    if (i === num1) {       
+      arr[i] = num2;        
+      return arr;           
+    }
+  }
+  return arr;
+}
+console.log(changeNumberInArray(1,[1,3,7,2],2));
 
 /* Project Standards:
     - Logging Standards
