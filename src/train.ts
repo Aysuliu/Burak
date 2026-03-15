@@ -351,17 +351,30 @@
 // console.log(celsiusToFahrenheit(0)); //32
 // console.log(celsiusToFahrenheit(10)); //50
 
-//TASK ZD
-function changeNumberInArray(num1: number, arr: number[], num2: number): number[] {
-  for (let i = 0; i < arr.length; i++) {
-    if (i === num1) {       
-      arr[i] = num2;        
-      return arr;           
-    }
-  }
-  return arr;
+// //TASK ZD
+// function changeNumberInArray(num1: number, arr: number[], num2: number): number[] {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (i === num1) {       
+//       arr[i] = num2;        
+//       return arr;           
+//     }
+//   }
+//   return arr;
+// }
+// console.log(changeNumberInArray(1,[1,3,7,2],2));
+
+
+//TASK ZE
+function removeDuplicate(str: string): string {
+  return str
+    .split("")
+    .filter((char, index, arr) => arr.indexOf(char) === index)
+    .join("");
 }
-console.log(changeNumberInArray(1,[1,3,7,2],2));
+
+console.log(removeDuplicate("stringg")); 
+console.log(removeDuplicate("hello"));   
+console.log(removeDuplicate("abbcdghaaar")); 
 
 /* Project Standards:
     - Logging Standards
