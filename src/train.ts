@@ -364,17 +364,34 @@
 // console.log(changeNumberInArray(1,[1,3,7,2],2));
 
 
-//TASK ZE
-function removeDuplicate(str: string): string {
-  return str
-    .split("")
-    .filter((char, index, arr) => arr.indexOf(char) === index)
-    .join("");
-}
+// //TASK ZE
+// function removeDuplicate(str: string): string {
+//   return str
+//     .split("")
+//     .filter((char, index, arr) => arr.indexOf(char) === index)
+//     .join("");
+// }
 
-console.log(removeDuplicate("stringg")); 
-console.log(removeDuplicate("hello"));   
-console.log(removeDuplicate("abbcdghaaar")); 
+// console.log(removeDuplicate("stringg")); 
+// console.log(removeDuplicate("hello"));   
+// console.log(removeDuplicate("abbcdghaaar")); 
+
+
+
+// TASK ZF
+function capitalizeWords(str: string): string {
+  return str
+    .split(" ")
+    .map((word) => {
+      if (word.length <= 2) {
+        return word;
+      }
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    .join(" ");
+}
+console.log(capitalizeWords("name should be a string")); 
+
 
 /* Project Standards:
     - Logging Standards
