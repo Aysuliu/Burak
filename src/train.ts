@@ -378,19 +378,28 @@
 
 
 
-// TASK ZF
-function capitalizeWords(str: string): string {
-  return str
-    .split(" ")
-    .map((word) => {
-      if (word.length <= 2) {
-        return word;
-      }
-      return word.charAt(0).toUpperCase() + word.slice(1);
-    })
-    .join(" ");
+// // TASK ZF
+// function capitalizeWords(str: string): string {
+//   return str
+//     .split(" ")
+//     .map((word) => {
+//       if (word.length <= 2) {
+//         return word;
+//       }
+//       return word.charAt(0).toUpperCase() + word.slice(1);
+//     })
+//     .join(" ");
+// }
+// console.log(capitalizeWords("name should be a string")); 
+
+
+// TASK ZG
+
+function convertToSnakeCase(input: string): string {
+    return input.split(" ").join("_");
 }
-console.log(capitalizeWords("name should be a string")); 
+
+console.log(convertToSnakeCase("name should be a string"));
 
 
 /* Project Standards:
