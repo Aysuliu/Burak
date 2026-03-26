@@ -393,13 +393,43 @@
 // console.log(capitalizeWords("name should be a string")); 
 
 
-// TASK ZG
+// // TASK ZG
 
-function convertToSnakeCase(input: string): string {
-    return input.split(" ").join("_");
-}
+// function convertToSnakeCase(input: string): string {
+//     return input.split(" ").join("_");
+// }
 
-console.log(convertToSnakeCase("name should be a string"));
+// console.log(convertToSnakeCase("name should be a string"));
+
+
+
+
+
+
+//TASK ZH 
+function findDisappearedNumbers(arr1: number[]): number[] {
+  const arr2: number[] = [];
+  const min = Math.min(...arr1);
+  const max = Math.max(...arr1);
+  for(let i = min; i<= max; i++) {
+    if(!arr1.includes(i)) {
+      arr2.push(i);
+    }
+  };
+
+  return arr2;
+};
+
+console.log(findDisappearedNumbers([1,3,7]));
+console.log(findDisappearedNumbers([1,6,9]));
+
+
+
+
+
+
+
+
 
 
 /* Project Standards:
