@@ -406,22 +406,41 @@
 
 
 
-//TASK ZH 
-function findDisappearedNumbers(arr1: number[]): number[] {
-  const arr2: number[] = [];
-  const min = Math.min(...arr1);
-  const max = Math.max(...arr1);
-  for(let i = min; i<= max; i++) {
-    if(!arr1.includes(i)) {
-      arr2.push(i);
-    }
-  };
+// //TASK ZH 
+// function findDisappearedNumbers(arr1: number[]): number[] {
+//   const arr2: number[] = [];
+//   const min = Math.min(...arr1);
+//   const max = Math.max(...arr1);
+//   for(let i = min; i<= max; i++) {
+//     if(!arr1.includes(i)) {
+//       arr2.push(i);
+//     }
+//   };
 
-  return arr2;
-};
+//   return arr2;
+// };
 
-console.log(findDisappearedNumbers([1,3,7]));
-console.log(findDisappearedNumbers([1,6,9]));
+// console.log(findDisappearedNumbers([1,3,7]));
+// console.log(findDisappearedNumbers([1,6,9]));
+
+
+//TASK ZI
+function delayHelloWorld(str: string): Promise<string> {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(str);
+    }, 3000);
+  });
+}; 
+
+delayHelloWorld("Hello World!").then((result) => {
+  console.log(result);
+});
+
+
+
+
+
 
 
 
