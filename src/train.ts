@@ -424,19 +424,34 @@
 // console.log(findDisappearedNumbers([1,6,9]));
 
 
-//TASK ZI
-function delayHelloWorld(str: string): Promise<string> {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(str);
-    }, 3000);
-  });
-}; 
+// //TASK ZI
+// function delayHelloWorld(str: string): Promise<string> {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve(str);
+//     }, 3000);
+//   });
+// }; 
 
-delayHelloWorld("Hello World!").then((result) => {
-  console.log(result);
-});
+// delayHelloWorld("Hello World!").then((result) => {
+//   console.log(result);
+// });
 
+
+// TASK ZJ:
+function reducedNestedArray(arr: any[]): number {
+  let sum = 0;
+  for(const i of arr) {
+    if(Array.isArray(i)) {
+      sum += reducedNestedArray(i);
+    } else {
+      sum += i;
+    }
+  }
+  return sum;
+};
+
+console.log(reducedNestedArray([1, [1, 2,[4]]])); //8
 
 
 
